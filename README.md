@@ -29,14 +29,14 @@ Toolkit di OSINT, network recon **passiva** e cifratura testo, cross-platform (W
 
 **Linux / macOS**
 ```bash
-pipx install git+https://github.com/TUO-USERNAME/reconkit.git
+pipx install git+https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git
 # oppure
-git clone https://github.com/TUO-USERNAME/reconkit.git && cd reconkit && pip install .
+git clone https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git && cd reconkit && pip install .
 ```
 
 **Windows** (con Python installato)
 ```powershell
-py -m pip install git+https://github.com/TUO-USERNAME/reconkit.git
+py -m pip install git+https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git
 ```
 Oppure scarica `reconkit.exe` dalla sezione **Releases** (nessun Python richiesto).
 
