@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "God's Multitool"
+version = "0.1.0"
+description = "Toolkit di OSINT e network recon passiva, cross-platform"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.scripts]
+reconkit = "reconkit.cli:main"
+
+[tool.setuptools]
+packages = ["reconkit", "reconkit.modules"]
