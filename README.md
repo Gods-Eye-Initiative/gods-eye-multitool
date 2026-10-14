@@ -1,8 +1,8 @@
-# ReconKit
+# God's Eye Multitool
 
 Toolkit di OSINT, network recon **passiva** e cifratura testo, cross-platform (Windows, Linux, macOS), scritto in Python. Tutti i moduli di recon usano solo la libreria standard; i soli comandi `encrypt`/`decrypt`/`genkey` richiedono la libreria `cryptography` (installata automaticamente da pip).
 
-> **Uso responsabile:** usa questo strumento solo su domini/sistemi tuoi o per cui hai un'autorizzazione esplicita. ReconKit raccoglie solo informazioni pubbliche su infrastrutture (domini, IP, certificati); non include bruteforce, cracking o exploitation.
+> **Uso responsabile:** usa questo strumento solo su domini/sistemi tuoi o per cui hai un'autorizzazione esplicita. God's Eye Multitool raccoglie solo informazioni pubbliche su infrastrutture (domini, IP, certificati); non include bruteforce, cracking o exploitation.
 
 ## Strumenti inclusi
 
@@ -38,7 +38,7 @@ git clone https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git && cd re
 ```powershell
 py -m pip install git+https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git
 ```
-Oppure scarica `reconkit.exe` dalla sezione **Releases** (nessun Python richiesto).
+Oppure scarica `gem.exe` dalla sezione **Releases** (nessun Python richiesto).
 
 ## Uso
 ```bash
@@ -78,7 +78,7 @@ Usa **AES-256 in modalita' CCM** (la stessa di CCMP/WPA2) con una chiave scelta 
 - `whois` segue i referral standard ma alcuni registrar restituiscono dati parziali.
 - `traceroute` richiede privilegi elevati (come il traceroute/tracert di sistema).
 - `subdomains` dipende dalla disponibilita' di crt.sh ed e' limitato ai certificati pubblicamente loggati.
-- Nessuno strumento qui effettua ricerche su persone (username, email, numeri di telefono): ReconKit copre solo infrastrutture di rete e domini.
+- Nessuno strumento qui effettua ricerche su persone (username, email, numeri di telefono): il Multitool copre solo infrastrutture di rete e domini.
 - `lanscan` legge la tabella ARP di sistema dopo aver "toccato" gli host: trova solo dispositivi che rispondono a una connessione TCP su porte comuni, non e' una scansione ARP attiva via raw socket.
 - `emailsec` testa solo una lista di selettori DKIM comuni: un selettore personalizzato non verra' trovato automaticamente.
 
