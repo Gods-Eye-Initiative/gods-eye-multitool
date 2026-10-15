@@ -3,21 +3,30 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "reconkit"
+name = "GEM"
 version = "0.1.0"
 description = "Toolkit di OSINT e network recon passiva, cross-platform"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "MIT" }
 dependencies = ["cryptography>=42"]
+
+[project.optional-dependencies]
+android = ["kivy>=2.3.0,<3"]
+windows = ["pyinstaller>=5.13.2,<7; sys_platform == 'win32'"]
+
+[project.scripts]
+reconkit = "reconkit.cli:main"
+reconkit-gui = "reconkit.gui_tk:main"
+
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
 ]
 
-[project.scripts]
-reconkit = "reconkit.cli:main"
-
 [tool.setuptools]
 packages = ["reconkit", "reconkit.modules"]
+
+[tool.setuptools.package-data]
+reconkit = ["logo.png", "logo_sidebar.png"]
