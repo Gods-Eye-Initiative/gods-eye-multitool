@@ -29,16 +29,16 @@ Toolkit di OSINT, network recon **passiva** e cifratura testo, cross-platform (W
 
 **Linux / macOS**
 ```bash
-pipx install git+https://github.com/TUO-USERNAME/reconkit.git
+pipx install git+https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git
 # oppure
-git clone https://github.com/TUO-USERNAME/reconkit.git && cd reconkit && pip install .
+git clone https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git && cd reconkit && pip install .
 ```
 
 **Windows** (con Python installato)
 ```powershell
-py -m pip install git+https://github.com/TUO-USERNAME/reconkit.git
+py -m pip install git+https://github.com/Gods-Eye-Initiative/gods-eye-multitool.git
 ```
-Oppure scarica `reconkit.exe` dalla sezione **Releases** (nessun Python richiesto).
+Oppure scarica `G.E.M.exe` dalla sezione **Releases** (nessun Python richiesto).
 
 ## Interfacce grafiche
 
@@ -71,22 +71,22 @@ py -3 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install ".[windows]"
-pyinstaller --clean --noconfirm --onefile --windowed --name ReconKit --paths . --add-data "reconkit\logo.png;reconkit" --add-data "reconkit\logo_sidebar.png;reconkit" packaging\windows_gui.py
+pyinstaller --clean --noconfirm --onefile --windowed --name GEM --paths . --add-data "reconkit\logo.png;reconkit" --add-data "reconkit\logo_sidebar.png;reconkit" packaging\windows_gui.py
 ```
 
 The `--add-data` options include the original window icon and the high-quality,
 pre-scaled sidebar logo in the one-file bundle.
 
 L'extra `windows` installa PyInstaller solo per il packaging: non è una dipendenza
-runtime della CLI. L'eseguibile prodotto è `dist\ReconKit.exe`. Smoke test da PowerShell:
+runtime della CLI. L'eseguibile prodotto è `dist\GEM.exe`. Smoke test da PowerShell:
 
 ```powershell
 Test-Path .\dist\ReconKit.exe
 Start-Process -FilePath .\dist\ReconKit.exe
 Start-Sleep -Seconds 3
-$app = Get-Process -Name ReconKit -ErrorAction SilentlyContinue |
+$app = Get-Process -Name GEM -ErrorAction SilentlyContinue |
   Where-Object { $_.MainWindowHandle -ne 0 } | Select-Object -First 1
-if (-not $app) { throw "La finestra di ReconKit non è stata avviata." }
+if (-not $app) { throw "La finestra di GEM non è stata avviata." }
 Write-Output "GUI aperta: $($app.MainWindowTitle)"
 ```
 
